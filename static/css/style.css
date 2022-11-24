@@ -1,6 +1,6 @@
-.bg{
+#bg{
     background-repeat: no-repeat;
     background-position: top;
-    background-size: 1600px 450px;
+    background-size: 1200px 450px;
     background-attachment: fixed;
 }
