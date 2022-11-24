@@ -31,3 +31,13 @@ def login (request):
 
 def signup (request):
     return render(request, "signup.html")
+
+# def showdata (request):
+#     return render(request, "showdata.html")
+
+def showdata(request):
+    contacts = Contact.objects.all()
+    # for i in contacts:
+    #     print(i.id,i.name,i.email,i.message)
+    data = {'Contact':contacts}
+    return render(request,'showdata.html',data)
