@@ -10,8 +10,8 @@ class Contact(models.Model):
         return self.name
 
 class Login(models.Model):
-    name = models.CharField(max_length=100,null=True)
     email = models.EmailField(max_length=100,null=True)
+    password = models.CharField(max_length=100,null=True)
     confirm = models.TextField(max_length=50,null=True)
 
     def __str__(self):

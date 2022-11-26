@@ -20,8 +20,8 @@
             <thead style="color: white;">
               <tr>
                 <th scope="col">Id</th>
-                <th scope="col">Name</th>
                 <th scope="col">Email</th>
+                <th scope="col">Password</th>
                 <th scope="col">Confirm</th>
               </tr>
             </thead>
@@ -29,8 +29,8 @@
                 {% for i in Login %}
               <tr>
                 <td>{{i.id}}</td>
-                <td>{{i.name}}</td>
                 <td>{{i.email}}</td>
+                <td>{{i.password}}</td>
                 <td>{{i.confirm}}</td>
               </tr> 
                 {% endfor %}       
