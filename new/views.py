@@ -1,11 +1,8 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-from .models import Contact
+from .models import Contact, Login, Signup
 
 # Create your views here.
-
-# def asme(request):
-#     return HttpResponse("Assalamualaikum Asme")
 
 def home (request):
     return render(request, "home.html")
@@ -23,13 +20,39 @@ def contact (request):
         contact.email = email
         contact.message = message
         contact.save()
-        return HttpResponse('<h1> Thanks for Contact with us</h1>')
+        # return HttpResponse('<h1> Thanks for Contact with us</h1>')
     return render(request, "contact.html")
 
 def login (request):
+    if request.method == 'POST':
+        name = request.POST.get('name')
+        email = request.POST.get('email')
+        confirm = request.POST.get('confirm')
+        login = Login()
+        login.name = name
+        login.email = email
+        login.confirm = confirm
+        login.save()
     return render(request, "login.html")
 
 def signup (request):
+    if request.method == 'POST':
+        firstname = request.POST.get('firstname')
+        lastname = request.POST.get('lastname')
+        email = request.POST.get('email')
+        password = request.POST.get('password')
+        presentAdd = request.POST.get('presentAdd')
+        parmanentAdd = request.POST.get('parmanentAdd')
+        city = request.POST.get('city')
+        signup = Signup()
+        signup.firstname = firstname
+        signup.lastname = lastname
+        signup.email = email
+        signup.password = password
+        signup.presentAdd = presentAdd
+        signup.parmanentAdd = parmanentAdd
+        signup.city = city
+        signup.save()
     return render(request, "signup.html")
 
 # def showdata (request):
@@ -41,3 +64,18 @@ def showdata(request):
     #     print(i.id,i.name,i.email,i.message)
     data = {'Contact':contacts}
     return render(request,'showdata.html',data)
+
+def logindata(request):
+    logins = Login.objects.all()
+    # for i in contacts:
+    #     print(i.id,i.name,i.email,i.message)
+    data = {'Login':logins}
+    return render(request,'logindata.html',data)
+
+def signupdata(request):
+    signups = Signup.objects.all()
+    # for i in contacts:
+    #     print(i.id,i.name,i.email,i.message)
+    data = {'Signup':signups}
+    return render(request,'signupdata.html',data)
+

@@ -1,8 +1,16 @@
 <!-- {% extends "layout.html" %} -->
-
+{% load static %}
 {% block body %}
 
-<div class="container">
+<body id="bg" style="background-image: url('{% static 'img/e.jpg' %}');
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: 1370px 800px;
+    background-attachment: fixed;">
+    
+</body>
+
+<div class="container" style="color: white; font-size: large;">
     <!-- <div class="row">
         <div class="col">
         <input type="text" class="form-control" placeholder="First name" aria-label="First name">
@@ -52,6 +60,8 @@
             <option>Sylhet</option>
             <option>Rajshahi</option>
             <option>Khulna</option>
+            <option>Chattogram</option>
+            <option>Rangpur</option>
         </select>
         </div>
         <div class="col-md-2">
