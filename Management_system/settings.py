@@ -80,7 +80,7 @@ DATABASES = {
         # "NAME": BASE_DIR / "db.sqlite3",
 
         "ENGINE": "django.db.backends.mysql",
-        "NAME": "airline_management",
+        "NAME": "bangladesh_airlines",
         "USER": "root",
         "PASSWORD": "",
         "HOST": "localhost",

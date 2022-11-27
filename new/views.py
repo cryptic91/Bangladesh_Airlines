@@ -25,13 +25,13 @@ def contact (request):
 
 def login (request):
     if request.method == 'POST':
-        name = request.POST.get('name')
         email = request.POST.get('email')
-        confirm = request.POST.get('confirm')
+        password = request.POST.get('password')
+        # confirm = request.POST.get('confirm')
         login = Login()
-        login.name = name
         login.email = email
-        login.confirm = confirm
+        login.password = password
+        # login.confirm = confirm
         login.save()
     return render(request, "login.html")
 
