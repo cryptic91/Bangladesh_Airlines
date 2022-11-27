@@ -62,6 +62,8 @@ class Migration(migrations.Migration):
                 ("presentAdd", models.TextField(max_length=150, null=True)),
                 ("parmanentAdd", models.TextField(max_length=150, null=True)),
                 ("city", models.TextField(max_length=50, null=True)),
+                # ("disctrict", models.TextChoices),
+                ("code", models.IntegerField(max_length=50, null=True)),
             ],
         ),
     ]

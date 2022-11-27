@@ -25,6 +25,8 @@ class Signup(models.Model):
     presentAdd = models.TextField(max_length=150,null=True)
     parmanentAdd = models.TextField(max_length=150,null=True)
     city = models.TextField(max_length=50,null=True)
+    code = models.IntegerField(max_length=50,null=True)
+    # district = models.TextChoices
 
     # def __str__(self):
     #     return self.firstname

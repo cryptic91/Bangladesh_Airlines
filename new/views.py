@@ -44,6 +44,8 @@ def signup (request):
         presentAdd = request.POST.get('presentAdd')
         parmanentAdd = request.POST.get('parmanentAdd')
         city = request.POST.get('city')
+        # district = request.POST.get('district')
+        code = request.POST.get('code')
         signup = Signup()
         signup.firstname = firstname
         signup.lastname = lastname
@@ -52,6 +54,8 @@ def signup (request):
         signup.presentAdd = presentAdd
         signup.parmanentAdd = parmanentAdd
         signup.city = city
+        signup.code = code
+        # signup.district = district
         signup.save()
     return render(request, "signup.html")
 
