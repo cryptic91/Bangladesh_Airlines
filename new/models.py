@@ -6,16 +6,16 @@ class Contact(models.Model):
     email = models.EmailField(max_length=100,null=True)
     message = models.TextField(max_length=500,null=True)
 
-    # def __str__(self):
-    #     return self.name
+    def __str__(self):
+        return self.name
 
 class Login(models.Model):
     email = models.EmailField(max_length=100,null=True)
     password = models.CharField(max_length=100,null=True)
     # confirm = models.TextField(max_length=50,null=True)
 
-    # def __str__(self):
-    #     return self.email
+    def __str__(self):
+        return self.email
 
 class Signup(models.Model):
     firstname = models.CharField(max_length=30,null=True)
@@ -28,5 +28,5 @@ class Signup(models.Model):
     code = models.IntegerField(max_length=50,null=True)
     # district = models.TextChoices
 
-    # def __str__(self):
-    #     return self.firstname
+    def __str__(self):
+        return self.firstname
