@@ -1,10 +1,25 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-from .models import Contact, Login, Signup
+from .models import Contact, Login, Signup, Ticket
 
 # Create your views here.
 
 def home (request):
+    if request.method == 'POST':
+        FlightNo = request.POST.get('FlightNo')
+        Type = request.POST.get('Type')
+        Origin = request.POST.get('Origin')
+        Destination = request.POST.get('Destination')
+        DepartureTime = request.POST.get('DepartureTime')
+        ArrivalTime = request.POST.get('ArrivalTime')
+        home = Ticket()
+        home.FlightNo = FlightNo
+        home.Type = Type
+        home.Origin = Origin
+        home.Destination = Destination
+        home.DepartureTime = DepartureTime
+        home.ArrivalTime = ArrivalTime
+        home.save()
     return render(request, "home.html")
 
 def about (request):
@@ -83,3 +98,9 @@ def signupdata(request):
     data = {'Signup':signups}
     return render(request,'signupdata.html',data)
 
+def ticket(request):
+    tickets = Ticket.objects.all()
+    # for i in contacts:
+    #     print(i.id,i.name,i.email,i.message)
+    data = {'Ticket':tickets}
+    return render(request,'ticket.html',data)

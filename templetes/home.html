@@ -60,60 +60,63 @@
 			<tbody>
 				<tr>
 						<!-- <td>Flight No</td> -->
-				<td><select class="form-select" aria-label="Default select example" style="background-color: rgb(160, 209, 226);">
+				<td><select name="FlightNo" class="form-select" aria-label="Default select example" style="background-color: rgb(160, 209, 226);">
 					<option selected>FlightNo</option>
 					<option name="BA3882" value="BA3882">BA3882</option>
 					<option name="BA3871" value="BA3871">BA3871</option>
 					<option name="BA3333" value="BA3333">BA3333</option>
 					</select></td>
 				<!-- <td>Typ</td> -->
-				<td><select class="form-select" aria-label="Default select example" style="background-color: rgb(160, 209, 226);">
+				<td><select name="Type" class="form-select" aria-label="Default select example" style="background-color: rgb(160, 209, 226);">
 					<option selected>Type</option>
 					<option name="A" value="A">A</option>
 					<option name="B" value="B">B</option>
 					<option name="C" value="C">C</option>
 					</select></td>
 				<!-- <td>Origin</td> -->
-				<td><select class="form-select" aria-label="Default select example" style="background-color: rgb(160, 209, 226);">
+				<td><select name="Origin" class="form-select" aria-label="Default select example" style="background-color: rgb(160, 209, 226);">
 					<option selected>Origin</option>
 					<option name="Dhaka" value="Dhaka">Dhaka</option>
 					<option name="Chattogram" value="Chattogram">Chattogram</option>
 					<option name="Khulna" value="Khulna">Khulna</option>
 					</select></td>
 				<!-- <td>Destination</td> -->
-				<td><select class="form-select" aria-label="Default select example" style="background-color: rgb(160, 209, 226);">
+				<td><select name="Destination" class="form-select" aria-label="Default select example" style="background-color: rgb(160, 209, 226);">
 					<option selected>Destination</option>
 					<option name="Dhaka" value="Dhaka">Dhaka</option>
 					<option name="Chattogram" value="Chattogram">Chattogram</option>
 					<option name="Khulna" value="Khulna">Khulna</option>
 					</select></td>
 				<!-- <td>DepartureTime</td> -->
-				<td><select class="form-select" aria-label="Default select example" style="background-color: rgb(160, 209, 226);">
+				<td><select name="DepartureTime" class="form-select" aria-label="Default select example" style="background-color: rgb(160, 209, 226);">
 					<option selected>DepartureTime</option>
-					<option name="7:00 am" value="7:00 am">7:00 am</option>
-					<option name="9:00 am" value="9:00 am">9:00 am</option>
-					<option name="11:00 am" value="11:00 am">11:00 am</option>
-					<option name="1:00 pm" value="1:00 pm">1:00 pm</option>
-					<option name="3:00 pm" value="3:00 pm">3:00 pm</option>
-					<option name="5:00 pm" value="5:00 pm">5:00 pm</option>
-					<option name="7:00 pm" value="7:00 pm">7:00 pm</option>
+					<option name="7am" value="7am">7:00 am</option>
+					<option name="9am" value="9am">9:00 am</option>
+					<option name="11am" value="11am">11:00 am</option>
+					<option name="1pm" value="1pm">1:00 pm</option>
+					<option name="3pm" value="3pm">3:00 pm</option>
+					<option name="5pm" value="5pm">5:00 pm</option>
+					<option name="7pm" value="7pm">7:00 pm</option>
 					</select></td>
 				<!-- <td>ArrivalTime</td> -->
-				<td><select class="form-select" aria-label="Default select example" style="background-color: rgb(160, 209, 226);">
+				<td><select name="ArrivalTime" class="form-select" aria-label="Default select example" style="background-color: rgb(160, 209, 226);">
 					<option selected>ArrivalTime</option>
-					<option name="7:00 am" value="7:00 am">7:00 am</option>
-					<option name="9:00 am" value="9:00 am">9:00 am</option>
-					<option name="11:00 am" value="11:00 am">11:00 am</option>
-					<option name="1:00 pm" value="1:00 pm">1:00 pm</option>
-					<option name="3:00 pm" value="3:00 pm">3:00 pm</option>
-					<option name="5:00 pm" value="5:00 pm">5:00 pm</option>
-					<option name="7:00 pm" value="7:00 pm">7:00 pm</option>
+					<option name="7am" value="7am">7:00 am</option>
+					<option name="9am" value="9am">9:00 am</option>
+					<option name="11am" value="11am">11:00 am</option>
+					<option name="1pm" value="1pm">1:00 pm</option>
+					<option name="3pm" value="3pm">3:00 pm</option>
+					<option name="5pm" value="5pm">5:00 pm</option>
+					<option name="7pm" value="7pm">7:00 pm</option>
 					</select></td>
-				<td><form method='GET' action='GDC-Book.php'>
+				<td>
+					<!-- <form method='GET' action='GDC-Book.php'> -->
     				<!-- <input type='hidden' name='varname' value='$var_value'> -->
-    				<input type='submit' value='BOOK' style="background-color: rgb(127, 186, 206);;
-					color: aliceblue;">
-					</form></td>
+    				<!-- <input type='submit' value='BOOK' style="background-color: rgb(127, 186, 206);;
+					color: aliceblue;"> -->
+					<input class="btn btn-primary" type="submit" value="Book">
+					<!-- </form> -->
+				</td>
 				<!-- <td><a href='GDC-Book.php?varname=<?php echo $var_value ?>'>Book</a></td>";*/ -->
 				</tr>
 							

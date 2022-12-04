@@ -30,3 +30,14 @@ class Signup(models.Model):
 
     def __str__(self):
         return self.firstname
+
+class Ticket(models.Model):
+    FlightNo = models.TextChoices('FlightNo', 'BA3882 BA3871 BA3333')
+    Type = models.TextChoices('Type', 'A B C')
+    Origin = models.TextChoices('Origin', 'Dhaka Chattogram Khulna')
+    Destination = models.TextChoices('Destination', 'Dhaka Chattogram Khulna')
+    DepartureTime = models.TextChoices('DepartureTime', '7am 9am 11am 1pm 3pm 5pm 7pm')
+    ArrivalTime = models.TextChoices('ArrivalTime', '7am 9am 11am 1pm 3pm 5pm 7pm')
+
+    def __str__(self):
+        return self.FlightNo
